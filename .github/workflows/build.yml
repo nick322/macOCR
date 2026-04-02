@@ -36,7 +36,7 @@ jobs:
         run: |
           cp build/Build/Products/Release/ocr ocr
           chmod +x ocr
-          lipo -info ocr
+          file ocr
           tar czf macOCR-${{ matrix.arch }}.tar.gz ocr
 
       - name: Upload artifact
